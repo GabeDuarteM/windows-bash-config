@@ -50,9 +50,9 @@
 * If you ever edit by accident a linux file inside windows, run the following commands:
 1. copy the contents of the edited file using windows, and paste to any other file
 2. deleted the file in windows
-3. touched the file in linux `touch ~/.bashrc`
-4. `sudo vim ~/.bashrc`
+3. touched the file in linux `touch <PATH/TO/EDITED/FILE.txt>`
+4. `sudo vim <PATH/TO/EDITED/FILE.txt>`
 5. `:set paste`
 6. `i`
-7. paste contents of old .bashrc into new bashrc.
+7. paste contents of old file into new file.
 8. press ESC and then `:wq`
