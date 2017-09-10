@@ -44,3 +44,15 @@
 "terminal.integrated.lineHeight": 1.6,
 "terminal.integrated.fontFamily": "Meslo LG L DZ for Powerline",  
 ```
+
+# Warnings
+* Always use a linux environment to edit linux files, don't ever edit linux files from windows. If you do so, linux will stop recognizing the file. Edit windows files inside linux is allowed.
+* If you ever edit by accident a linux file inside windows, run the following commands:
+1. copy the contents of the edited file using windows, and paste to any other file
+2. deleted the file in windows
+3. touched the file in linux `touch ~/.bashrc`
+4. `sudo vim ~/.bashrc`
+5. `:set paste`
+6. `i`
+7. paste contents of old .bashrc into new bashrc.
+8. press ESC and then `:wq`
