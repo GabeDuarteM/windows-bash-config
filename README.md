@@ -4,26 +4,23 @@
 2. inside bash, run:
 * `sudo apt-get install -y zsh`
 * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-* `nano ~/.zshrc`
+* edit `~/.zshrc`
 * change `ZSH_THEME` to `agnoster`
-* uncomment `DISABLE_LS_COLORS="true"`
-* exit `.zshrc` and edit `.bashrc`
+* exit `~/.zshrc` and edit `~/.bashrc`
 * add the following lines
  ```
- # Launch Zsh
- if [ -t 1 ]; then
- exec zsh
- fi
+# Launch Zsh
+if [ -t 1 ]; then
+exec zsh
+fi
+ 
+# Removes username@computer from prompt
+DEFAULT_USER=$USER
  ```
-3. clone `https://github.com/powerline/fonts.git --depth=1`
-4. open powershell
+3. open powershell
+4. clone `https://github.com/powerline/fonts.git --depth=1`
 5. `cd fonts/`
 6. run ./install.ps1
-7. open `regedit`
-8. go to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont`
-9. add a new registry with the key `Meslo LG L DZ for Powerline` ([more info on that](https://www.howtogeek.com/howto/windows-vista/stupid-geek-tricks-enable-more-fonts-for-the-windows-command-prompt/))
-10. reboot the computer
-11. open bash and go to properties > fonts > change the font to `Meslo LG L DZ for Powerline`
 
 # Cmder config to work with zsh
 1. open the settings
@@ -36,6 +33,9 @@
 8. set `command` to `/single -run {bash::bash for windows}`
 9. set `Icon file` to `<PATH/TO/CMDER>\vendor\conemu-maximus5\ConEmu64.exe,0`
 10. click register
+11. go to `Main > Appearance`
+12. uncheck `Enhance progressbars and scrollbars` under the `Appearance` group
+13. save settings
 
 # VSCode config to work with zsh
 1. add the following lines to `settings.json`
