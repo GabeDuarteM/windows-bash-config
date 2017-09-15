@@ -56,3 +56,11 @@ DEFAULT_USER=$USER
 6. `i`
 7. paste contents of old file into new file.
 8. press ESC and then `:wq`
+
+# Troubleshooting
+#### `command not found: ^M` error
+edit `~/.gitconfig` and remove the following lines:
+```
+[core]
+    autocrlf = true
+```
