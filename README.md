@@ -6,6 +6,11 @@
 * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 * edit `~/.zshrc`
 * change `ZSH_THEME` to `agnoster`
+* add the following to the end of the file:
+```
+# Removes username@computer from prompt
+DEFAULT_USER=$USER
+```
 * exit `~/.zshrc` and edit `~/.bashrc`
 * add the following lines
  ```
@@ -13,14 +18,17 @@
 if [ -t 1 ]; then
 exec zsh
 fi
- 
-# Removes username@computer from prompt
-DEFAULT_USER=$USER
  ```
 3. open powershell
 4. clone `https://github.com/powerline/fonts.git --depth=1`
 5. `cd fonts/`
-6. run ./install.ps1
+6. run .\install.ps1 (if you get an error about `about_Execution_Policies`, open powershell as admin and run `Set-ExecutionPolicy Unrestricted` ([more info on that](https://docs.microsoft.com/pt-br/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-5.1&viewFallbackFrom=powershell-Microsoft.PowerShell.Core)))
+7. open `regedit`		
+8. go to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont`		
+9. add a new registry with the key `Meslo LG L DZ for Powerline` ([more info on that](https://www.howtogeek.com/howto/windows-vista/stupid-geek-tricks-enable-more-fonts-for-the-windows-command-prompt/))		
+10. reboot the computer		
+11. open bash and go to properties > fonts > change the font to `Meslo LG L DZ for Powerline`
+
 
 # Cmder config to work with zsh
 1. open the settings
